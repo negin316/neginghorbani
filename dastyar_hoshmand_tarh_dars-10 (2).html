@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#101b35">
+<title>دستیار هوشمند طراحی طرح درس روزانه</title>
+<style>
+:root{--navy:#101b35;--navy2:#1c2b4d;--gold:#d7ad65;--bronze:#a66c3c;--ink:#202a3d;--muted:#657087;--paper:#f6f8fc;--line:#e3e8f1;--white:#fff;--success:#18794e;--danger:#b42318;--shadow:0 18px 50px rgba(16,27,53,.10)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Tahoma,"Segoe UI",Arial,sans-serif;color:var(--ink);background:linear-gradient(135deg,rgba(246,248,252,.82),rgba(246,248,252,.88)),url("https://cdn.imgurl.ir/uploads/n051352_file_00000000db6c81f7852b98082f6bc223.png") center top / cover fixed no-repeat;line-height:1.8;min-height:100vh}button,input,select,textarea{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,a:focus-visible{outline:3px solid #d7ad65;outline-offset:3px}.app-shell{width:min(1120px,calc(100% - 30px));margin:0 auto;padding:26px 0 42px}.topbar{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:20px}.brand{display:flex;align-items:center;gap:12px;color:var(--navy);font-weight:800}.brand-mark{width:46px;height:46px;border-radius:15px;background:linear-gradient(145deg,#24395f,#101b35);display:grid;place-items:center;color:#f5d59c;box-shadow:0 8px 20px #101b3526;font-size:24px}.eyebrow{font-size:.78rem;color:var(--bronze);font-weight:800;letter-spacing:.02em}.top-chip{border:1px solid #d9c39e;color:#72532e;background:#fffaf0;border-radius:999px;padding:7px 13px;font-size:.8rem;white-space:nowrap}.hero{position:relative;overflow:hidden;border-radius:28px;background:linear-gradient(125deg,#101b35 0%,#1c2b4d 70%,#273958 100%);color:#fff;padding:32px clamp(20px,4vw,48px);box-shadow:var(--shadow);display:grid;grid-template-columns:1.3fr .7fr;align-items:center;gap:20px}.hero:before,.hero:after{content:"";position:absolute;border:1px solid #ffffff14;border-radius:50%;pointer-events:none}.hero:before{width:320px;height:320px;left:-100px;top:-180px}.hero:after{width:240px;height:240px;left:70px;bottom:-190px}.hero h1{font-size:clamp(1.5rem,3.4vw,2.35rem);line-height:1.55;margin:8px 0 6px}.hero p{color:#e0e6f0;margin:0;max-width:650px}.hero .eyebrow{color:#f0ce91}.robot-wrap{display:flex;justify-content:center;align-items:center;position:relative;z-index:1}.robot{width:150px;height:150px;filter:drop-shadow(0 12px 15px #0004);animation:float 4s ease-in-out infinite}.robot.large{width:176px;height:176px}@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}.designer{display:flex;align-items:center;gap:10px;margin:18px 0 24px;padding:12px 17px;background:linear-gradient(100deg,#fff,#fffaf1);border:1px solid #e7d5b6;border-radius:15px;color:var(--navy);font-weight:800;width:fit-content;box-shadow:0 8px 24px #101b3509}.designer span:first-child{font-size:1.2rem;color:var(--bronze)}.section-head{display:flex;align-items:center;gap:12px;margin:25px 0 14px}.section-number{width:38px;height:38px;border-radius:12px;background:#e9edf5;color:var(--navy);display:grid;place-items:center;font-weight:900}.section-head h2{margin:0;font-size:1.2rem;color:var(--navy)}.section-head p{margin:0;color:var(--muted);font-size:.88rem}.panel{background:rgba(255,255,255,.91);border:1px solid #e5eaf2;border-radius:22px;padding:clamp(17px,3vw,28px);box-shadow:0 10px 32px #1523440a;backdrop-filter:blur(8px)}.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.field{min-width:0}.field.full{grid-column:1/-1}.field label,.field .field-label{display:block;font-weight:800;color:#26344e;margin-bottom:7px;font-size:.94rem}.required{color:#b42318}.hint{display:block;font-size:.78rem;color:var(--muted);margin-top:5px}.control{width:100%;border:1px solid #d7deea;border-radius:12px;padding:12px 13px;background:#fff;color:var(--ink);transition:border-color .2s,box-shadow .2s;min-height:48px}.control:focus{outline:none;border-color:#a67b42;box-shadow:0 0 0 3px #d7ad6526}.control::placeholder{color:#9aa3b4}.control.textarea{resize:vertical;min-height:100px}.option-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.check-option{display:flex;align-items:flex-start;gap:9px;padding:11px 12px;border:1px solid #e0e6ef;border-radius:12px;background:#fff;cursor:pointer;min-height:48px}.check-option:has(input:checked){border-color:#c5a36d;background:#fffbf3}.check-option input{accent-color:#9c6d34;margin-top:6px;flex-shrink:0}.conditional{margin-top:12px}.hidden{display:none!important}.error-summary{display:none;border:1px solid #f3b6b2;background:#fff5f4;color:#8d1d16;padding:12px 15px;border-radius:12px;margin-bottom:15px}.error-summary.show{display:block}.field-error{font-size:.8rem;color:var(--danger);margin-top:5px}.invalid{border-color:#d92d20!important;box-shadow:0 0 0 3px #d92d2012!important}.action-row{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:24px}.primary-btn,.secondary-btn,.danger-btn,.tool-btn{border:0;border-radius:14px;padding:13px 19px;font-weight:800;transition:transform .18s,box-shadow .18s,background .18s;display:inline-flex;align-items:center;justify-content:center;gap:9px;text-decoration:none}.primary-btn{background:linear-gradient(120deg,#101b35,#26395e);color:#fff;box-shadow:0 10px 22px #101b3527;border:1px solid #c8a66c;min-height:54px}.primary-btn:hover{transform:translateY(-2px);box-shadow:0 14px 26px #101b3530}.primary-btn:active,.secondary-btn:active,.danger-btn:active,.tool-btn:active{transform:scale(.98)}.primary-btn:disabled{opacity:.65;cursor:wait;transform:none}.secondary-btn{background:#fff;border:1px solid #d9dfeb;color:var(--navy)}.danger-btn{background:#fff4f2;border:1px solid #f0b7b0;color:#a52b22}.small-note{font-size:.82rem;color:var(--muted)}.guide-strip{margin-top:18px;display:flex;gap:12px;align-items:flex-start;background:#f0f4fb;border:1px solid #dfe7f5;border-radius:14px;padding:14px 16px;color:#44516b;font-size:.86rem}.guide-strip .bulb{font-size:1.25rem}.page{animation:fadeIn .32s ease both}@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}.tools-hero{text-align:center;padding:25px 18px 18px}.tools-hero h1{font-size:clamp(1.45rem,3vw,2.1rem);margin:4px 0;color:var(--navy)}.tools-hero p{color:var(--muted);margin:4px auto;max-width:720px}.welcome{margin:16px auto 8px;max-width:850px;background:linear-gradient(110deg,#fffaf0,#fff);border:1px solid #e8d7b8;border-radius:17px;padding:16px 20px;color:#463b2b}.welcome strong{color:#7d5727}.tools-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px;margin-top:22px}.tool-card{--accent:#26395e;--tint:#edf1f8;background:rgba(255,255,255,.94);border:1px solid #e2e7f0;border-radius:20px;padding:20px;box-shadow:0 10px 25px #1725440a;display:flex;flex-direction:column;min-width:0;transition:transform .22s,box-shadow .22s,border-color .22s;position:relative;overflow:hidden}.tool-card:before{content:"";height:4px;background:var(--accent);position:absolute;inset:0 0 auto}.tool-card:hover{transform:translateY(-4px);box-shadow:0 18px 34px #17254415;border-color:#d1d9e7}.tool-top{display:flex;align-items:center;gap:13px}.tool-icon{width:58px;height:58px;border-radius:17px;background:var(--tint);color:var(--accent);display:grid;place-items:center;font-size:27px;font-weight:900;flex-shrink:0}.tool-card h3{margin:0;font-size:1.1rem;color:var(--navy)}.tool-sub{font-size:.75rem;color:var(--muted)}.tool-card p{font-size:.87rem;color:#58647a;margin:14px 0 20px;min-height:52px}.tool-actions{display:grid;gap:9px;margin-top:auto}.tool-btn{padding:10px 12px;border-radius:11px;font-size:.87rem;width:100%}.tool-btn.enter{background:var(--accent);color:#fff}.tool-btn.copy{background:#fff;border:1px solid #dfe4ed;color:#293650}.tool-tip{font-size:.78rem;color:#68748a;margin:17px auto 0;text-align:center}.bottom-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:25px 0 4px}.toast-region{position:fixed;z-index:1000;top:16px;left:16px;right:16px;display:flex;justify-content:center;pointer-events:none}.toast{pointer-events:auto;max-width:min(580px,100%);background:#17233e;color:#fff;padding:12px 18px;border-radius:13px;box-shadow:0 12px 35px #0003;display:flex;align-items:center;gap:10px;animation:fadeIn .2s ease;font-size:.9rem}.toast.success{background:#146c43}.toast.error{background:#9f2922}.toast.info{background:#26395e}.toast button{background:transparent;color:#fff;border:0;font-size:1.1rem;margin-right:auto}.modal-backdrop{position:fixed;inset:0;background:#0d1730a8;display:grid;place-items:center;padding:20px;z-index:1100}.modal{background:#fff;border-radius:20px;padding:25px;max-width:430px;width:100%;box-shadow:0 24px 70px #0004}.modal h2{margin:0 0 8px;color:var(--navy)}.modal p{color:#5b667a;margin:0 0 20px}.modal-actions{display:flex;gap:10px;justify-content:flex-start;flex-wrap:wrap}.footer{text-align:center;color:#8992a4;font-size:.75rem;margin-top:30px}.footer strong{color:#6c7485}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.music-controls{position:fixed;z-index:1200;left:18px;bottom:18px;display:flex;flex-direction:column;align-items:flex-start;gap:8px}.music-toggle{position:static;border:1px solid #f0d39c;border-radius:999px;padding:12px 17px;background:linear-gradient(130deg,#101b35,#26395e);color:#fff;font-weight:800;box-shadow:0 10px 28px #101b3540;display:flex;align-items:center;gap:9px}.music-toggle[aria-pressed="true"]{background:linear-gradient(130deg,#8a5b27,#bd8a43);color:#fff}.music-toggle .music-dot{width:9px;height:9px;border-radius:50%;background:#f4d08b;box-shadow:0 0 0 4px #f4d08b22}.music-toggle[aria-pressed="true"] .music-dot{animation:pulseMusic 1.4s infinite}.music-fallback{font-size:.78rem;font-weight:700;color:#fff;background:#17233e;padding:7px 11px;border:1px solid #f0d39c;border-radius:10px;text-decoration:none;box-shadow:0 6px 18px #101b352b}@keyframes pulseMusic{50%{box-shadow:0 0 0 8px #f4d08b10}}.file-ready{margin:16px auto 8px;max-width:850px;background:rgba(235,248,241,.96);border:1px solid #b7e0c8;border-radius:17px;padding:16px 20px;color:#214d35}.file-ready strong{color:#17633a}.file-download{border:0;border-radius:11px;padding:10px 12px;font-size:.87rem;width:100%;font-weight:800;background:#fff;border:1px solid #dfe4ed;color:#293650;cursor:pointer}@media(max-width:600px){.music-controls{left:12px;bottom:12px}.music-toggle{padding:11px 14px;font-size:.86rem}}
+@media(max-width:850px){.hero{grid-template-columns:1fr .45fr}.robot{width:125px;height:125px}.tools-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.app-shell{width:min(100% - 20px,1120px);padding-top:12px}.topbar{align-items:flex-start}.top-chip{font-size:.7rem;white-space:normal;text-align:center}.hero{grid-template-columns:1fr;padding:25px 20px;gap:0}.hero-copy{order:2}.robot-wrap{order:1;margin-bottom:8px}.robot{width:105px;height:105px}.hero h1{font-size:1.5rem}.designer{width:100%;justify-content:center;margin:14px 0 20px}.form-grid{grid-template-columns:1fr;gap:16px}.field.full{grid-column:auto}.option-grid{grid-template-columns:1fr}.tools-grid{grid-template-columns:1fr}.tool-card p{min-height:0}.tools-hero{padding:16px 4px}.tools-hero .robot{width:130px;height:130px}.action-row>*{width:100%}.panel{padding:16px}.section-head{align-items:flex-start}.section-head h2{font-size:1.05rem}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<div class="toast-region" id="toastRegion" aria-live="polite" aria-atomic="true"></div>
+<div class="app-shell">
+<header class="topbar">
+  <div class="brand"><div class="brand-mark" aria-hidden="true">✦</div><div><div class="eyebrow">EDTECH • SMART TEACHING</div><div>دستیار هوشمند آموزشی</div></div></div>
+  <div class="top-chip">ویژه آموزگاران دوره ابتدایی</div>
+</header>
+
+<main>
+<section id="formPage" class="page">
+  <div class="hero">
+    <div class="hero-copy">
+      <div class="eyebrow">طراحی هدفمند • تدریس خلاقانه • ارزشیابی مؤثر</div>
+      <h1>دستیار هوشمند طراحی طرح درس روزانه</h1>
+      <p>اطلاعات کلاس را وارد کن؛ پرامپت تخصصی و متناسب با شرایط واقعی تدریس تو آماده می‌شود.</p>
+    </div>
+    <div class="robot-wrap" aria-label="ربات هوش مصنوعی آموزشی">
+      <svg class="robot" viewBox="0 0 180 180" role="img" aria-label="ربات دوست‌داشتنی هوش مصنوعی">
+        <defs><linearGradient id="rb" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#b9c8df"/></linearGradient><linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffe5a6"/><stop offset="1" stop-color="#c58c42"/></linearGradient></defs>
+        <path d="M90 19V34" stroke="#f1c878" stroke-width="5" stroke-linecap="round"/><circle cx="90" cy="13" r="8" fill="url(#gold)"/>
+        <rect x="39" y="38" width="102" height="84" rx="26" fill="url(#rb)" stroke="#8195b5" stroke-width="3"/>
+        <rect x="49" y="50" width="82" height="59" rx="18" fill="#172845"/>
+        <ellipse cx="72" cy="78" rx="7" ry="10" fill="#8fe5f4"/><ellipse cx="108" cy="78" rx="7" ry="10" fill="#8fe5f4"/>
+        <path d="M73 94 Q90 107 107 94" fill="none" stroke="#f2ca7b" stroke-width="4" stroke-linecap="round"/>
+        <rect x="23" y="64" width="16" height="36" rx="8" fill="url(#gold)"/><rect x="141" y="64" width="16" height="36" rx="8" fill="url(#gold)"/>
+        <path d="M55 124 L48 145 Q48 152 57 152 H123 Q132 152 132 145 L125 124" fill="#dbe4f1" stroke="#8195b5" stroke-width="3"/>
+        <rect x="70" y="128" width="40" height="15" rx="7" fill="#172845"/><circle cx="80" cy="135" r="3" fill="#f1c878"/><circle cx="90" cy="135" r="3" fill="#8fe5f4"/><circle cx="100" cy="135" r="3" fill="#f1c878"/>
+        <path d="M48 151 L39 164 M132 151 L141 164" stroke="#dbe4f1" stroke-width="9" stroke-linecap="round"/><path d="M70 155 L66 166 M110 155 L114 166" stroke="#f1c878" stroke-width="8" stroke-linecap="round"/>
+        <path d="M24 39 l4 -8 4 8 8 4 -8 4 -4 8 -4 -8 -8 -4z" fill="#f1c878" opacity=".9"/><path d="M148 26 l3 -6 3 6 6 3 -6 3 -3 6 -3 -6 -6 -3z" fill="#8fe5f4"/>
+      </svg>
+    </div>
+  </div>
+
+  <div class="designer"><span aria-hidden="true">✧</span><span>طراح : نگین قربانی</span></div>
+
+  <div class="section-head"><div class="section-number">۱</div><div><h2>اطلاعات طرح درس</h2><p>فیلدهای ستاره‌دار را کامل کن.</p></div></div>
+  <form id="lessonForm" class="panel" novalidate>
+    <div class="error-summary" id="errorSummary" role="alert"></div>
+    <div class="form-grid">
+      <div class="field">
+        <label for="grade">پایه تحصیلی <span class="required">*</span></label>
+        <select id="grade" name="grade" class="control" required>
+          <option value="">پایه را انتخاب کن</option>
+          <option>اول ابتدایی</option><option>دوم ابتدایی</option><option>سوم ابتدایی</option><option>چهارم ابتدایی</option><option>پنجم ابتدایی</option><option>ششم ابتدایی</option>
+        </select><div class="field-error" data-error-for="grade"></div>
+      </div>
+      <div class="field">
+        <label for="book">نام کتاب <span class="required">*</span></label>
+        <input id="book" name="book" class="control" type="text" maxlength="120" placeholder="مثلاً: علوم تجربی، فارسی، ریاضی، مطالعات اجتماعی" required>
+        <div class="field-error" data-error-for="book"></div>
+      </div>
+      <div class="field full">
+        <label for="topic">موضوع درس <span class="required">*</span></label>
+        <textarea id="topic" name="topic" class="control textarea" maxlength="1600" placeholder="عنوان درس، شماره درس، مفاهیم اصلی یا نکات مورد تأکید را وارد کنید." required></textarea>
+        <div class="field-error" data-error-for="topic"></div>
+      </div>
+      <div class="field">
+        <label for="duration">مدت جلسه <span class="required">*</span></label>
+        <select id="duration" name="duration" class="control" required>
+          <option value="45">۴۵ دقیقه</option><option value="60">۶۰ دقیقه</option><option value="80">۸۰ دقیقه</option><option value="custom">زمان دلخواه</option>
+        </select>
+        <div id="customDurationWrap" class="conditional hidden"><label for="customDuration">مدت دلخواه (دقیقه) <span class="required">*</span></label><input id="customDuration" class="control" type="number" min="1" max="360" step="1" inputmode="numeric" placeholder="مثلاً ۵۰"><div class="field-error" data-error-for="customDuration"></div></div>
+      </div>
+      <div class="field">
+        <label for="count">تعداد فراگیران</label>
+        <input id="count" name="count" class="control" type="number" min="1" max="200" step="1" inputmode="numeric" placeholder="تعداد دانش‌آموزان کلاس را وارد کنید.">
+        <span class="hint">اختیاری؛ اگر خالی باشد، فعالیت‌ها برای تعداد نامشخص طراحی می‌شوند.</span><div class="field-error" data-error-for="count"></div>
+      </div>
+      <div class="field full">
+        <div class="field-label">فضا و امکانات آموزشی <span class="required">*</span></div>
+        <div class="option-grid" id="environmentOptions">
+          <label class="check-option"><input type="checkbox" name="environment" value="کلاس معمولی"> <span>کلاس معمولی</span></label>
+          <label class="check-option"><input type="checkbox" name="environment" value="کلاس هوشمند"> <span>کلاس هوشمند</span></label>
+          <label class="check-option"><input type="checkbox" name="environment" value="حیاط مدرسه"> <span>حیاط مدرسه</span></label>
+          <label class="check-option"><input type="checkbox" name="environment" value="کلاس با امکانات محدود"> <span>کلاس با امکانات محدود</span></label>
+          <label class="check-option"><input id="otherEnvironment" type="checkbox" name="environment" value="سایر شرایط"> <span>سایر شرایط</span></label>
+        </div>
+        <div id="otherEnvironmentWrap" class="conditional hidden"><label for="otherEnvironmentText">توضیح سایر شرایط <span class="required">*</span></label><input id="otherEnvironmentText" class="control" type="text" maxlength="500" placeholder="شرایط یا امکانات دیگر را توضیح بده"><div class="field-error" data-error-for="otherEnvironmentText"></div></div>
+        <div class="field-error" data-error-for="environment"></div>
+      </div>
+      <div class="field full">
+        <label for="features">ویژگی‌های خاص کلاس</label>
+        <textarea id="features" name="features" class="control textarea" maxlength="1600" placeholder="مثلاً: تفاوت سطح یادگیری، دانش‌آموزان نیازمند حمایت آموزشی، محدودیت زمانی، تفاوت‌های فردی، شرایط خاص کلاس یا نیازهای آموزشی ویژه."></textarea>
+        <span class="hint">اختیاری؛ اگر خالی بماند، هیچ ویژگی خاصی به کلاس نسبت داده نمی‌شود.</span>
+      </div>
+    </div>
+    <div class="action-row">
+      <button id="generateBtn" class="primary-btn" type="submit"><span aria-hidden="true">📋</span><span>ساخت و کپی پرامپت</span></button>
+      <span class="small-note">متن پرامپت نمایش داده نمی‌شود؛ پس از ساخت، به‌صورت متن در کلیپ‌بورد کپی می‌شود.</span>
+    </div>
+  </form>
+  <div class="guide-strip"><div class="bulb" aria-hidden="true">💡</div><div><strong>راهنمای سریع:</strong> پایه، کتاب، موضوع درس و شرایط کلاس را وارد کن. پس از کپی شدن پرامپت، یکی از ابزارهای هوش مصنوعی را باز کن و متن را در کادر گفت‌وگو بچسبان. متن پرامپت در این برنامه نمایش داده نمی‌شود.</div></div>
+</section>
+
+<section id="toolsPage" class="page hidden" aria-labelledby="toolsTitle">
+  <div class="tools-hero">
+    <div class="robot-wrap">
+      <svg class="robot large" viewBox="0 0 180 180" role="img" aria-label="ربات هوش مصنوعی خوشامدگو">
+        <defs><linearGradient id="rb2" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#b9c8df"/></linearGradient><linearGradient id="gold2" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffe5a6"/><stop offset="1" stop-color="#c58c42"/></linearGradient></defs>
+        <path d="M90 19V34" stroke="#b88643" stroke-width="5" stroke-linecap="round"/><circle cx="90" cy="13" r="8" fill="url(#gold2)"/>
+        <rect x="39" y="38" width="102" height="84" rx="26" fill="url(#rb2)" stroke="#8195b5" stroke-width="3"/><rect x="49" y="50" width="82" height="59" rx="18" fill="#172845"/>
+        <ellipse cx="72" cy="78" rx="7" ry="10" fill="#8fe5f4"/><ellipse cx="108" cy="78" rx="7" ry="10" fill="#8fe5f4"/><path d="M73 94 Q90 107 107 94" fill="none" stroke="#f2ca7b" stroke-width="4" stroke-linecap="round"/>
+        <rect x="23" y="64" width="16" height="36" rx="8" fill="url(#gold2)"/><rect x="141" y="64" width="16" height="36" rx="8" fill="url(#gold2)"/>
+        <path d="M55 124 L48 145 Q48 152 57 152 H123 Q132 152 132 145 L125 124" fill="#dbe4f1" stroke="#8195b5" stroke-width="3"/><rect x="70" y="128" width="40" height="15" rx="7" fill="#172845"/><circle cx="80" cy="135" r="3" fill="#f1c878"/><circle cx="90" cy="135" r="3" fill="#8fe5f4"/><circle cx="100" cy="135" r="3" fill="#f1c878"/>
+        <path d="M48 151 L39 164 M132 151 L141 164" stroke="#dbe4f1" stroke-width="9" stroke-linecap="round"/><path d="M70 155 L66 166 M110 155 L114 166" stroke="#f1c878" stroke-width="8" stroke-linecap="round"/>
+        <path d="M24 39 l4 -8 4 8 8 4 -8 4 -4 8 -4 -8 -8 -4z" fill="#f1c878"/><path d="M148 26 l3 -6 3 6 6 3 -6 3 -3 6 -3 -6 -6 -3z" fill="#8fe5f4"/>
+      </svg>
+    </div>
+    <div class="eyebrow">گام بعدی • انتخاب ابزار</div>
+    <h1 id="toolsTitle">دستیار هوش مصنوعی خودت را انتخاب کن</h1>
+    <p>پرامپت آماده و کپی شده است؛ ابزار موردعلاقه‌ات را باز کن و متن را در گفت‌وگو بچسبان.</p>
+    <div class="file-ready"><strong>آفرین آموزگار خلاق! ✨ پرامپت با موفقیت کپی شد.</strong><br>متن پرامپت در این برنامه نمایش داده نمی‌شود. حالا وارد ابزار هوش مصنوعی دلخواهت شو و متن کپی‌شده را در کادر گفت‌وگو بچسبان.</div>
+    <p>برای استفاده، ابزار دلخواهت را باز کن، داخل کادر گفت‌وگو لمس کن و گزینه «چسباندن» را بزن؛ سپس درخواست را ارسال کن.</p>
+  </div>
+
+  <div class="tools-grid">
+    <article class="tool-card" style="--accent:#167c68;--tint:#e7f6f1">
+      <div class="tool-top"><div class="tool-icon" aria-hidden="true">✳</div><div><h3>ChatGPT</h3><div class="tool-sub">OpenAI</div></div></div>
+      <p>برای طراحی، بازنویسی و تکمیل طرح درس آموزشی</p>
+      <div class="tool-actions"><a class="tool-btn enter" href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer" data-tool="ChatGPT">ورود به ChatGPT ↗</a><button class="tool-btn copy" type="button" data-copy-prompt>📋 کپی دوباره پرامپت</button></div>
+    </article>
+    <article class="tool-card" style="--accent:#386cbe;--tint:#edf3ff">
+      <div class="tool-top"><div class="tool-icon" aria-hidden="true">◈</div><div><h3>DeepSeek</h3><div class="tool-sub">AI Assistant</div></div></div>
+      <p>برای تحلیل آموزشی و تدوین سناریوی تدریس</p>
+      <div class="tool-actions"><a class="tool-btn enter" href="https://chat.deepseek.com/" target="_blank" rel="noopener noreferrer" data-tool="DeepSeek">ورود به DeepSeek ↗</a><button class="tool-btn copy" type="button" data-copy-prompt>📋 کپی دوباره پرامپت</button></div>
+    </article>
+    <article class="tool-card" style="--accent:#a45a36;--tint:#fff0e8">
+      <div class="tool-top"><div class="tool-icon" aria-hidden="true">✺</div><div><h3>Claude</h3><div class="tool-sub">Claude AI</div></div></div>
+      <p>برای نگارش دقیق، ساختارمند و خلاقانه طرح درس</p>
+      <div class="tool-actions"><a class="tool-btn enter" href="https://claude.ai/" target="_blank" rel="noopener noreferrer" data-tool="Claude">ورود به Claude ↗</a><button class="tool-btn copy" type="button" data-copy-prompt>📋 کپی دوباره پرامپت</button></div>
+    </article>
+    <article class="tool-card" style="--accent:#5c7c2f;--tint:#f0f7e6">
+      <div class="tool-top"><div class="tool-icon" aria-hidden="true">🦆</div><div><h3>Duck.ai</h3><div class="tool-sub">DuckDuckGo</div></div></div>
+      <p>یک گزینه دیگر برای گفت‌وگو و کمک‌گرفتن از هوش مصنوعی</p>
+      <div class="tool-actions"><a class="tool-btn enter" href="https://duck.ai/" target="_blank" rel="noopener noreferrer" data-tool="Duck.ai">ورود به Duck.ai ↗</a><button class="tool-btn copy" type="button" data-copy-prompt>📋 کپی دوباره پرامپت</button></div>
+    </article>
+    <article class="tool-card" style="--accent:#6d52b5;--tint:#f1edff">
+      <div class="tool-top"><div class="tool-icon" aria-hidden="true">∞</div><div><h3>Microsoft Copilot</h3><div class="tool-sub">Microsoft</div></div></div>
+      <p>برای کمک به طراحی فعالیت‌ها و سازمان‌دهی ایده‌های آموزشی</p>
+      <div class="tool-actions"><a class="tool-btn enter" href="https://copilot.microsoft.com/" target="_blank" rel="noopener noreferrer" data-tool="Copilot">ورود به Copilot ↗</a><button class="tool-btn copy" type="button" data-copy-prompt>📋 کپی دوباره پرامپت</button></div>
+    </article>
+    <article class="tool-card" style="--accent:#202b40;--tint:#eef1f5">
+      <div class="tool-top"><div class="tool-icon" aria-hidden="true">⌘</div><div><h3>Perplexity</h3><div class="tool-sub">Answer engine</div></div></div>
+      <p>برای بررسی ایده‌ها و کمک به جست‌وجو و تحلیل اطلاعات آموزشی</p>
+      <div class="tool-actions"><a class="tool-btn enter" href="https://www.perplexity.ai/" target="_blank" rel="noopener noreferrer" data-tool="Perplexity">ورود به Perplexity ↗</a><button class="tool-btn copy" type="button" data-copy-prompt>📋 کپی دوباره پرامپت</button></div>
+    </article>
+  </div>
+  <p class="tool-tip">پرامپت در کلیپ‌بورد دستگاهت کپی می‌شود؛ در گفت‌وگوی ابزار انتخابی گزینه «چسباندن» را بزن. خود متن در این صفحه نشان داده نمی‌شود.</p>
+  <div class="bottom-actions">
+    <button class="secondary-btn" id="backBtn" type="button">🏠 بازگشت به صفحه اصلی</button>
+    <button class="danger-btn" id="exitBtn" type="button">🚪 خروج از ابزار</button>
+  </div>
+</section>
+</main>
+<footer class="footer">طراحی آموزشی و تجربه کاربری • <strong>طراح : نگین قربانی</strong></footer>
+</div>
+
+<audio id="backgroundMusic" src="https://cdn.imgurl.ir/uploads/j707310_Obsessed_With_Your_Eyes.mp3" preload="metadata" loop playsinline></audio>
+<div class="music-controls" role="group" aria-label="کنترل موسیقی پس‌زمینه">
+  <button id="musicToggle" class="music-toggle" type="button" aria-pressed="false" aria-label="پخش موسیقی پس‌زمینه">
+    <span class="music-dot" aria-hidden="true"></span><span id="musicLabel">♫ پخش موسیقی</span>
+  </button>
+  <a id="openAudioLink" class="music-fallback hidden" href="https://cdn.imgurl.ir/uploads/j707310_Obsessed_With_Your_Eyes.mp3" target="_blank" rel="noopener noreferrer">باز کردن مستقیم فایل صوتی ↗</a>
+</div>
+
+<div id="exitModal" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="exitTitle">
+  <div class="modal">
+    <h2 id="exitTitle">خروج از ابزار</h2>
+    <p>آیا می‌خواهی برای بستن این زبانه تلاش کنیم؟ ممکن است مرورگر اجازه بستن این صفحه را ندهد. اطلاعات فرم در همین صفحه پاک نمی‌شود.</p>
+    <div class="modal-actions"><button id="confirmExit" class="danger-btn" type="button">بله، تلاش برای خروج</button><button id="cancelExit" class="secondary-btn" type="button">انصراف</button></div>
+  </div>
+</div>
+
+<script>
+(function(){
+'use strict';
+const $ = (selector, root=document) => root.querySelector(selector);
+const $$ = (selector, root=document) => Array.from(root.querySelectorAll(selector));
+const form = $('#lessonForm');
+const formPage = $('#formPage');
+const toolsPage = $('#toolsPage');
+const generateBtn = $('#generateBtn');
+const errorSummary = $('#errorSummary');
+const durationSelect = $('#duration');
+const customDurationWrap = $('#customDurationWrap');
+const customDuration = $('#customDuration');
+const otherEnvironment = $('#otherEnvironment');
+const otherEnvironmentWrap = $('#otherEnvironmentWrap');
+const otherEnvironmentText = $('#otherEnvironmentText');
+const exitModal = $('#exitModal');
+let generatedPrompt = '';
+let busy = false;
+let toastTimer = null;
+
+function showToast(message, type='info'){
+  const region = $('#toastRegion');
+  region.replaceChildren();
+  const toast = document.createElement('div');
+  toast.className = 'toast ' + type;
+  const text = document.createElement('span');
+  text.textContent = message;
+  const close = document.createElement('button');
+  close.type = 'button'; close.setAttribute('aria-label','بستن پیام'); close.textContent = '×';
+  close.addEventListener('click', ()=>toast.remove());
+  toast.append(text,close); region.append(toast);
+  if(toastTimer) clearTimeout(toastTimer);
+  toastTimer = setTimeout(()=>{ if(toast.isConnected) toast.remove(); }, 4200);
+}
+function syncConditionalFields(){
+  const custom = durationSelect.value === 'custom';
+  customDurationWrap.classList.toggle('hidden', !custom);
+  customDuration.required = custom;
+  if(!custom){ customDuration.classList.remove('invalid'); clearFieldError('customDuration'); }
+  otherEnvironmentWrap.classList.toggle('hidden', !otherEnvironment.checked);
+  otherEnvironmentText.required = otherEnvironment.checked;
+  if(!otherEnvironment.checked){ otherEnvironmentText.classList.remove('invalid'); clearFieldError('otherEnvironmentText'); }
+}
+durationSelect.addEventListener('change',syncConditionalFields);
+otherEnvironment.addEventListener('change',syncConditionalFields);
+
+function clearFieldError(name){
+  const target = $('[data-error-for="'+name+'"]');
+  if(target) target.textContent = '';
+}
+function setFieldError(name, message){
+  const target = $('[data-error-for="'+name+'"]');
+  if(target) target.textContent = message;
+  const control = $('#'+name);
+  if(control) control.classList.add('invalid');
+}
+function clearErrors(){
+  errorSummary.classList.remove('show');
+  errorSummary.textContent = '';
+  $$('.field-error').forEach(el=>el.textContent='');
+  $$('.invalid').forEach(el=>el.classList.remove('invalid'));
+}
+function validate(){
+  clearErrors();
+  const errors = [];
+  const grade = $('#grade');
+  const book = $('#book');
+  const topic = $('#topic');
+  if(!grade.value){setFieldError('grade','لطفاً پایه تحصیلی را انتخاب کن.');errors.push({el:grade,msg:'پایه تحصیلی را انتخاب کن.'});}
+  if(!book.value.trim()){setFieldError('book','لطفاً نام کتاب را وارد کن.');errors.push({el:book,msg:'نام کتاب را وارد کن.'});}
+  if(!topic.value.trim()){setFieldError('topic','لطفاً موضوع درس را وارد کن.');errors.push({el:topic,msg:'موضوع درس را وارد کن.'});}
+  const envs = $$('input[name="environment"]:checked');
+  if(!envs.length){setFieldError('environment','حداقل یک گزینه از فضا و امکانات آموزشی را انتخاب کن.');errors.push({el:$('#environmentOptions'),msg:'فضا و امکانات آموزشی را انتخاب کن.'});}
+  if(durationSelect.value==='custom'){
+    const n=Number(customDuration.value);
+    if(!customDuration.value.trim()||!Number.isInteger(n)||n<1||n>360){setFieldError('customDuration','مدت جلسه باید عدد صحیحی بین ۱ تا ۳۶۰ دقیقه باشد.');errors.push({el:customDuration,msg:'مدت دلخواه باید عدد صحیحی بین ۱ تا ۳۶۰ دقیقه باشد.'});}
+  }
+  const count=$('#count');
+  if(count.value.trim()){
+    const n=Number(count.value);
+    if(!Number.isInteger(n)||n<1||n>200){setFieldError('count','تعداد فراگیران باید عدد صحیحی بین ۱ تا ۲۰۰ باشد.');errors.push({el:count,msg:'تعداد فراگیران باید عدد صحیحی بین ۱ تا ۲۰۰ باشد.'});}
+  }
+  if(otherEnvironment.checked && !otherEnvironmentText.value.trim()){
+    setFieldError('otherEnvironmentText','لطفاً سایر شرایط را توضیح بده.');errors.push({el:otherEnvironmentText,msg:'توضیح سایر شرایط را وارد کن.'});
+  }
+  if(errors.length){
+    errorSummary.textContent='لطفاً موارد زیر را بررسی کن: '+errors.map(e=>e.msg).join(' ');
+    errorSummary.classList.add('show');
+    const first=errors[0].el;
+    first.scrollIntoView({behavior:'smooth',block:'center'});
+    if(first.focus) first.focus({preventScroll:true});
+    return false;
+  }
+  return true;
+}
+function getDuration(){
+  return durationSelect.value==='custom' ? Number(customDuration.value) : Number(durationSelect.value);
+}
+function buildPrompt(data){
+  const envText = data.environments.map(v=>v==='سایر شرایط' ? 'سایر شرایط: '+data.otherEnvironment : v).join('، ');
+  const countText = data.count ? data.count+' دانش‌آموز' : 'تعداد نامشخص؛ فعالیت‌ها را انعطاف‌پذیر طراحی کن و از فرض‌کردن تعداد ثابت خودداری کن';
+  const featureText = data.features.trim() ? data.features.trim() : 'ویژگی خاصی اعلام نشده است؛ هیچ ویژگی، نیاز یا محدودیتی را از خودت به کلاس نسبت نده.';
+  return `# مأموریت: طراحی طرح درس روزانه حرفه‌ای و اجرایی برای دوره ابتدایی
+
+## اطلاعات ورودی (مقادیر فرم)
+- پایه تحصیلی: ${data.grade}
+- نام کتاب: ${data.book}
+- موضوع درس: ${data.topic}
+- مدت کل جلسه: ${data.duration} دقیقه
+- فضا و امکانات آموزشی: ${envText}
+- تعداد فراگیران: ${countText}
+- ویژگی‌های خاص کلاس: ${featureText}
+
+## نقش و تخصص تو
+در نقش یک مشاور ارشد پداگوژی، متخصص برنامه‌ریزی درسی دوره ابتدایی، طراح یادگیری فعال، متخصص ارزشیابی تکوینی، طراح فعالیت‌های خلاق و سناریونویس حرفه‌ای تدریس عمل کن. خروجی باید به زبان فارسی روان، حرفه‌ای، دقیق و کاملاً قابل‌اجرا برای آموزگار باشد.
+
+## اصول الزامی طراحی
+۱. طرح درس را دقیقاً با پایه، کتاب، موضوع، مدت، محیط، امکانات و ویژگی‌های اعلام‌شده متناسب کن.
+۲. اهداف آموزشی را در سه حوزه دانش، مهارت و نگرش مشخص کن.
+۳. برای هر هدف، نشانه یا رفتار قابل‌مشاهده‌ای تعریف کن که نشان دهد دانش‌آموز به هدف رسیده است.
+۴. پیش‌نیازهای یادگیری را مشخص کن و در صورت نیاز راه کوتاهی برای بررسی آن‌ها پیشنهاد بده.
+۵. ابزار و مواد موردنیاز را فقط با توجه به امکانات واقعی اعلام‌شده پیشنهاد کن؛ برای امکانات موجود فرض نساز و برای کلاس با امکانات محدود، جایگزین کم‌هزینه یا بدون فناوری ارائه بده.
+۶. مراحل تدریس را بر پایه یادگیری فعال، مشارکت دانش‌آموز، پرسشگری، حل مسئله، تجربه و فعالیت معنادار تنظیم کن؛ از سخنرانی طولانی و فعالیت‌های کلیشه‌ای دوری کن.
+۷. فعالیت‌های آغازین، ایجاد انگیزه، تدریس و یادگیری، فعالیت فردی یا گروهی، جمع‌بندی و ارزشیابی پایانی را پوشش بده.
+۸. برای هر مرحله زمان دقیق تعیین کن؛ مجموع زمان تمام مراحل باید دقیقاً ${data.duration} دقیقه شود. زمان‌ها را پیش از نهایی‌کردن جمع بزن و اگر جمع برابر نیست، جدول را اصلاح کن. هیچ زمان اضافه یا هم‌پوشانی پنهانی نداشته باش.
+۹. فعالیت‌های معلم و فعالیت‌های دانش‌آموزان را از یکدیگر تفکیک کن.
+۱۰. پرسش‌های هدفمند، پاسخ‌های احتمالی دانش‌آموزان و بازخوردهای سازنده و مناسب معلم را پیشنهاد بده.
+۱۱. ارزشیابی تشخیصی، تکوینی و پایانی را متناسب با همین درس طراحی کن و ابزار یا شواهد یادگیری هرکدام را مشخص کن.
+۱۲. برای دانش‌آموزانی که به حمایت بیشتری نیاز دارند، داربست آموزشی و راهنمای مرحله‌ای؛ و برای دانش‌آموزانی که سریع‌تر یاد می‌گیرند، فعالیت گسترشی معنادار ارائه بده. از برچسب‌زنی به دانش‌آموزان خودداری کن.
+۱۳. تکلیف خلاقانه، کاربردی، کم‌هزینه و متناسب با سن دانش‌آموزان پیشنهاد کن؛ تکلیف نباید صرفاً رونویسی باشد.
+۱۴. فعالیت‌ها را با تعداد فراگیران و فضای آموزشی اعلام‌شده تطبیق بده. اگر تعداد نامشخص است، شیوه اجرا را انعطاف‌پذیر و قابل تنظیم بنویس.
+۱۵. از فعالیت‌های غیرعملی، تکراری، نامتناسب با سن یا نیازمند وسایل اعلام‌نشده خودداری کن.
+۱۶. اگر درباره محتوای رسمی کتاب اطلاعات کافی نداری، متن کتاب، شماره صفحه، هدف رسمی یا محتوای تأییدنشده جعل نکن. بر اساس موضوع واردشده یک طرح درس قابل استفاده بساز و هر ابهام اساسی را کوتاه و شفاف اعلام کن.
+۱۷. هیچ ویژگی خاصی را که کاربر وارد نکرده به کلاس نسبت نده. اگر فیلد ویژگی‌های خاص خالی است، فقط طراحی عمومی و فراگیر ارائه کن.
+۱۸. در صورت ابهام اساسی در موضوع، به جای توقف کامل، فرض محدود خود را شفاف بیان کن و طرحی قابل‌استفاده بر اساس داده‌های موجود بساز.
+۱۹. زبان، دستورالعمل‌ها، مدت فعالیت‌ها و پیچیدگی مفاهیم را با سن و پایه دانش‌آموزان هماهنگ کن.
+۲۰. پیشنهادها باید عملیاتی و قابل اجرا باشند؛ از توصیه‌های کلی بدون نمونه رفتار یا جمله معلم پرهیز کن.
+
+## ساختار اجباری خروجی
+
+### بخش اول: شناسنامه طرح درس
+- پایه تحصیلی
+- نام کتاب
+- موضوع درس
+- مدت جلسه
+- فضای آموزشی و امکانات
+- تعداد فراگیران
+- ویژگی‌های مهم کلاس (فقط موارد اعلام‌شده؛ اگر موردی وارد نشده، بنویس «اعلام نشده است»)
+
+### بخش دوم: اهداف آموزشی
+- اهداف دانشی
+- اهداف مهارتی
+- اهداف نگرشی
+- پیش‌نیازها
+- شاخص‌های قابل‌مشاهده تحقق هر هدف (به صورت فهرست یا جدول)
+
+### بخش سوم: جدول جامع طرح درس
+جدولی با ستون‌های دقیق زیر بساز:
+۱. مرحله تدریس
+۲. زمان (مدت هر مرحله و بازه شروع تا پایان)
+۳. فعالیت‌های معلم
+۴. فعالیت‌های دانش‌آموزان
+۵. روش تدریس
+۶. ابزار و مواد
+۷. شیوه ارزشیابی
+
+مجموع زمان مراحل جدول باید دقیقاً ${data.duration} دقیقه باشد. در انتهای جدول، مجموع زمان را به‌صورت صریح بنویس و محاسبه را کنترل کن.
+
+### بخش چهارم: سناریوی اجرایی و دقیقه‌به‌دقیقه معلم
+برای تک‌تک مراحل جدول، موارد زیر را ارائه کن:
+- زمان شروع و پایان
+- اقدامات معلم به ترتیب اجرا
+- جمله‌ها و دستورالعمل‌های دقیق که معلم می‌تواند عیناً به دانش‌آموزان بگوید
+- پرسش‌های هدفمند معلم
+- پاسخ‌های احتمالی دانش‌آموزان (به عنوان نمونه، نه پاسخ قطعی)
+- فعالیت فردی یا گروهی و محصول قابل مشاهده آن
+- شیوه مدیریت کلاس و انتقال بین فعالیت‌ها
+- راه مشارکت‌دادن دانش‌آموزان کم‌فعال، بدون اجبار یا شرمسارسازی
+- بازخورد مناسب معلم
+- روش بررسی یادگیری و شواهدی که باید مشاهده یا ثبت شود
+
+### بخش پنجم: ارزشیابی و بازخورد
+- نمونه ارزشیابی تشخیصی با پرسش یا فعالیت مشخص
+- ابزار ارزشیابی تکوینی در حین تدریس (مانند چک‌لیست کوتاه یا مشاهده هدفمند)
+- ارزشیابی پایانی متناسب با اهداف
+- نمونه بازخورد سازنده برای پاسخ درست، پاسخ ناقص و برداشت نادرست
+- معیار ساده برای تشخیص اینکه کدام هدف محقق شده یا به تمرین بیشتری نیاز دارد
+
+### بخش ششم: توجه به تفاوت‌های فردی
+- حمایت آموزشی برای دانش‌آموز نیازمند کمک بیشتر
+- فعالیت گسترشی برای دانش‌آموز سریع‌تر
+- راه مشارکت برابر و دسترس‌پذیر برای دانش‌آموزان با شیوه‌های متفاوت یادگیری، بدون فرض‌کردن تشخیص یا شرایط اعلام‌نشده
+
+### بخش هفتم: آمادگی پیش از کلاس
+یک چک‌لیست کوتاه و عملی از وسایل، چیدمان، آماده‌سازی فعالیت‌ها و شواهد ارزشیابی تهیه کن.
+
+### بخش هشتم: تکلیف خلاقانه و کاربردی
+تکلیفی کوتاه، متناسب با سن و موضوع، قابل انجام با امکانات معمول خانه، همراه با توضیح روشن برای دانش‌آموز و معیار ساده بررسی آن پیشنهاد بده.
+
+## کنترل کیفیت نهایی پیش از ارائه
+- مدت تمام مراحل را جمع بزن؛ مجموع باید دقیقاً ${data.duration} دقیقه باشد.
+- مطمئن شو هیچ مرحله‌ای زمان مبهم یا بدون مدت ندارد.
+- مطمئن شو فعالیت معلم و دانش‌آموز جداست و هر مرحله یک شاهد یادگیری دارد.
+- از جعل محتوای رسمی کتاب، شماره صفحه یا اهداف رسمی خودداری کن.
+- تمام اجزای طرح درس باید با اطلاعات ورودی و امکانات واقعی کلاس سازگار باشند.
+- خروجی را با تیترهای روشن، جدول خوانا و زبان حرفه‌ای فارسی ارائه کن.
+- فقط طرح درس نهایی را ارائه بده؛ درباره فرایند داخلی خود توضیح اضافه نده.`;
+}
+
+async function copyPromptText(text){
+  if(!text) throw new Error('ابتدا فرم را تکمیل و پرامپت را بساز.');
+  if(navigator.clipboard && typeof navigator.clipboard.writeText==='function'){
+    try{await navigator.clipboard.writeText(text);return;}catch(err){/* تلاش برای روش سازگار با مرورگرهای قدیمی‌تر */}
+  }
+  const area=document.createElement('textarea');
+  area.value=text;area.setAttribute('readonly','');area.setAttribute('aria-hidden','true');
+  area.style.position='fixed';area.style.top='0';area.style.left='-10000px';area.style.width='1px';area.style.height='1px';area.style.opacity='0';
+  document.body.appendChild(area);area.focus({preventScroll:true});area.select();area.setSelectionRange(0,area.value.length);
+  let copied=false;try{copied=document.execCommand('copy');}catch(err){copied=false;}
+  area.remove();
+  if(!copied) throw new Error('مرورگر اجازه کپی خودکار را نداد. صفحه را در مرورگر اصلی باز کن و دوباره تلاش کن.');
+}
+function showTools(){
+  formPage.classList.add('hidden');
+  toolsPage.classList.remove('hidden');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function showForm(){
+  toolsPage.classList.add('hidden');
+  formPage.classList.remove('hidden');
+  window.scrollTo({top:0,behavior:'smooth'});
+  $('#grade').focus({preventScroll:true});
+}
+form.addEventListener('submit',async function(event){
+  event.preventDefault();
+  if(busy) return;
+  if(!validate()) return;
+  const environments=$$('input[name="environment"]:checked').map(el=>el.value);
+  const data={
+    grade:$('#grade').value,
+    book:$('#book').value.trim(),
+    topic:$('#topic').value.trim(),
+    duration:getDuration(),
+    environments,
+    otherEnvironment:otherEnvironmentText.value.trim(),
+    count:$('#count').value.trim(),
+    features:$('#features').value
+  };
+  generatedPrompt=buildPrompt(data);
+  busy=true; generateBtn.disabled=true;
+  const original=generateBtn.innerHTML;
+  generateBtn.textContent='در حال ساخت و کپی…';
+  try{
+    await copyPromptText(generatedPrompt);
+    showToast('پرامپت به‌صورت متن کپی شد؛ متن آن در صفحه نمایش داده نمی‌شود.','success');
+    showTools();
+  }catch(err){
+    showToast(err.message || 'کپی پرامپت انجام نشد. لطفاً دوباره تلاش کن.','error');
+  }finally{
+    busy=false;generateBtn.disabled=false;generateBtn.innerHTML=original;
+  }
+});
+$$('[data-copy-prompt]').forEach(button=>button.addEventListener('click',async function(){
+  if(!generatedPrompt){showToast('ابتدا فرم صفحه اصلی را تکمیل کن.','error');return;}
+  const oldText=button.textContent;button.disabled=true;button.textContent='در حال کپی…';
+  try{await copyPromptText(generatedPrompt);showToast('پرامپت دوباره کپی شد؛ حالا آن را در گفت‌وگوی ابزار بچسبان.','success');}
+  catch(err){showToast(err.message || 'کپی پرامپت انجام نشد.','error');}
+  finally{button.disabled=false;button.textContent=oldText;}
+}));
+$$('[data-tool]').forEach(link=>link.addEventListener('click',function(){
+  showToast('پرامپت قبلاً کپی شده است؛ در گفت‌وگوی '+this.dataset.tool+' گزینه «چسباندن» را بزن.','info');
+}));
+$('#backBtn').addEventListener('click',showForm);
+$('#exitBtn').addEventListener('click',()=>{exitModal.classList.remove('hidden');$('#confirmExit').focus();});
+$('#cancelExit').addEventListener('click',()=>{exitModal.classList.add('hidden');$('#exitBtn').focus();});
+exitModal.addEventListener('click',e=>{if(e.target===exitModal) exitModal.classList.add('hidden');});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!exitModal.classList.contains('hidden')) exitModal.classList.add('hidden');});
+$('#confirmExit').addEventListener('click',function(){
+  exitModal.classList.add('hidden');
+  try{window.close();}catch(e){}
+  setTimeout(()=>showToast('مرورگر اجازه بستن این زبانه را نداد. می‌توانی زبانه را به‌صورت دستی ببندی.','info'),120);
+});
+const backgroundMusic=$('#backgroundMusic');
+const musicToggle=$('#musicToggle');
+const musicLabel=$('#musicLabel');
+const openAudioLink=$('#openAudioLink');
+let audioErrorShown=false;
+function setMusicButton(isPlaying){
+  musicToggle.setAttribute('aria-pressed',String(isPlaying));
+  musicToggle.setAttribute('aria-label',isPlaying?'توقف موسیقی پس‌زمینه':'پخش موسیقی پس‌زمینه');
+  musicLabel.textContent=isPlaying?'♫ توقف موسیقی':'♫ پخش موسیقی';
+}
+backgroundMusic.volume=0.32;
+backgroundMusic.addEventListener('playing',()=>{setMusicButton(true);openAudioLink.classList.add('hidden');audioErrorShown=false;});
+backgroundMusic.addEventListener('pause',()=>setMusicButton(false));
+backgroundMusic.addEventListener('ended',()=>setMusicButton(false));
+backgroundMusic.addEventListener('error',()=>{
+  setMusicButton(false);
+  openAudioLink.classList.remove('hidden');
+  if(!audioErrorShown){showToast('مرورگر نتوانست فایل صوتی را از میزبان بارگیری کند. پیوند مستقیم را امتحان کن؛ اگر آن هم باز نشد، خود لینک صوتی یا سرور میزبان مشکل دارد.','error');audioErrorShown=true;}
+});
+backgroundMusic.addEventListener('stalled',()=>showToast('بارگیری موسیقی کند شده است؛ چند لحظه صبر کن یا پیوند مستقیم را باز کن.','info'));
+musicToggle.addEventListener('click',async function(){
+  if(!backgroundMusic.paused){backgroundMusic.pause();return;}
+  try{
+    if(backgroundMusic.error || backgroundMusic.networkState===HTMLMediaElement.NETWORK_NO_SOURCE){
+      audioErrorShown=false;
+      backgroundMusic.src='https://cdn.imgurl.ir/uploads/j707310_Obsessed_With_Your_Eyes.mp3';
+      backgroundMusic.load();
+    }
+    await backgroundMusic.play();
+    setMusicButton(true);
+  }catch(e){
+    setMusicButton(false);
+    openAudioLink.classList.remove('hidden');
+    showToast('پخش نشد. اگر لینک مستقیم هم کار نکند، باید فایل MP3 را روی یک میزبان عمومیِ قابل پخش بارگذاری کنی.','error');
+  }
+});
+
+syncConditionalFields();
+})();
+</script>
+</body>
+</html>
